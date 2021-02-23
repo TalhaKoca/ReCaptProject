@@ -1,0 +1,34 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Cars]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Cars].[CategoryId] is being dropped, data loss could occur.
+       The type for column BrandId in table [dbo].[Cars] is currently  NVARCHAR (50) NOT NULL but is being changed to  INT
+         NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  INT
+         NULL.
+       The type for column ColorId in table [dbo].[Cars] is currently  NVARCHAR (50) NOT NULL but is being changed to  INT
+         NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  INT
+         NULL.
+       The type for column DailyPrice in table [dbo].[Cars] is currently  DECIMAL (18) NULL but is being changed to  MONEY
+         NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  MONEY
+         NULL.
+       The type for column Description in table [dbo].[Cars] is currently  NVARCHAR (70) NULL but is being changed to  NVARCHAR
+         (50) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type 
+         NVARCHAR (50) NULL.
+
+** User actions
+     Table rebuild
+       [dbo].[Cars] (Table)
+
+** Supporting actions
+
+The column [dbo].[Cars].[CategoryId] is being dropped, data loss could occur.
+The type for column BrandId in table [dbo].[Cars] is currently  NVARCHAR (50) NOT NULL but is being changed to  INT NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  INT NULL.
+The type for column ColorId in table [dbo].[Cars] is currently  NVARCHAR (50) NOT NULL but is being changed to  INT NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  INT NULL.
+The type for column DailyPrice in table [dbo].[Cars] is currently  DECIMAL (18) NULL but is being changed to  MONEY NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  MONEY NULL.
+The type for column Description in table [dbo].[Cars] is currently  NVARCHAR (70) NULL but is being changed to  NVARCHAR (50) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  NVARCHAR (50) NULL.
+

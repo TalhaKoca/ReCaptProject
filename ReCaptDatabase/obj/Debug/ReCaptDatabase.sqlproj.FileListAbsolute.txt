@@ -1,0 +1,10 @@
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\ReCaptDatabase\bin\Debug\ReCaptDatabase.dacpac
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\ReCaptDatabase\bin\Debug\ReCaptDatabase.dll
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\ReCaptDatabase\bin\Debug\ReCaptDatabase.pdb
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\ReCaptDatabase\obj\Debug\Model.xml
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\ReCaptDatabase\obj\Debug\refactor.xml
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\ReCaptDatabase\obj\Debug\postdeploy.sql
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\ReCaptDatabase\obj\Debug\predeploy.sql
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\ReCaptDatabase\obj\Debug\ReCaptDatabase.dll
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\ReCaptDatabase\obj\Debug\ReCaptDatabase.pdb
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\ReCaptDatabase\obj\Debug\ReCaptDatabase.sqlprojAssemblyReference.cache
