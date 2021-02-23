@@ -58,3 +58,5 @@ C:\Users\HP\Desktop\Visual Studio\ReCapProject\Console\obj\Debug\netcoreapp3.1\C
 C:\Users\HP\Desktop\Visual Studio\ReCapProject\Console\obj\Debug\netcoreapp3.1\ConsoleUI.dll
 C:\Users\HP\Desktop\Visual Studio\ReCapProject\Console\obj\Debug\netcoreapp3.1\ConsoleUI.pdb
 C:\Users\HP\Desktop\Visual Studio\ReCapProject\Console\obj\Debug\netcoreapp3.1\ConsoleUI.genruntimeconfig.cache
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\Console\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\Console\bin\Debug\netcoreapp3.1\Core.pdb

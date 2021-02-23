@@ -12,3 +12,5 @@ C:\Users\HP\Desktop\Visual Studio\ReCapProject\Business\obj\Debug\netstandard2.0
 C:\Users\HP\Desktop\Visual Studio\ReCapProject\Business\obj\Debug\netstandard2.0\Business.csproj.CopyComplete
 C:\Users\HP\Desktop\Visual Studio\ReCapProject\Business\obj\Debug\netstandard2.0\Business.dll
 C:\Users\HP\Desktop\Visual Studio\ReCapProject\Business\obj\Debug\netstandard2.0\Business.pdb
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\Business\bin\Debug\netstandard2.0\Core.dll
+C:\Users\HP\Desktop\Visual Studio\ReCapProject\Business\bin\Debug\netstandard2.0\Core.pdb
