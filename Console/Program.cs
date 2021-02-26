@@ -9,7 +9,7 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            //CarTest();
+            CarTest();
             //BrandTest();
             //ColorTest();
         }
@@ -65,30 +65,37 @@ namespace ConsoleUI
         {
             CarManager carManager = new CarManager(new EfCarDal());
 
-
-            foreach (var product in carManager.GetCarDetails())
+            var result = carManager.GetCarDetails();
+            if (result.Success)
             {
-                Console.WriteLine(product.Description + "/" + product.BrandName + "/" + product.ColorName + "/" + product.DailyPrice);
-
+                foreach (var car in result.Data)
+                {
+                    Console.WriteLine(car.Description + "/" + car.BrandName + "/" + car.ColorName + "/" + car.DailyPrice);
+                }
             }
-            carManager.Add(new Car { BrandId = 2, ColorId = 5, DailyPrice = 120000, Description = "Hyundai", ModelYear = 2020 });
-            carManager.Add(new Car { BrandId = 1, ColorId = 5, DailyPrice = 110000, Description = "Fiat", ModelYear = 2021 });
-            carManager.GetCarsByBrand(1);
-            carManager.Delete(new Car { CarId = 2003 });
-
-            carManager.Update(new Car
+            else
             {
-                CarId = 1,
-                ColorId = 1,
-                BrandId = 1,
-                DailyPrice = 121222,
-                Description = "BMW",
-                ModelYear = 2019
-            });
-            foreach (var c in carManager.GetAll())
-            {
-                Console.WriteLine(c.Description);
+                Console.WriteLine(result.Message);
             }
+       
+            //carManager.Add(new Car { BrandId = 2, ColorId = 5, DailyPrice = 120000, Description = "Hyundai", ModelYear = 2020 });
+            //carManager.Add(new Car { BrandId = 1, ColorId = 5, DailyPrice = 110000, Description = "Fiat", ModelYear = 2021 });
+            //carManager.GetCarsByBrand(1);
+            //carManager.Delete(new Car { CarId = 2003 });
+
+            //carManager.Update(new Car
+            //{
+            //    CarId = 1,
+            //    ColorId = 1,
+            //    BrandId = 1,
+            //    DailyPrice = 121222,
+            //    Description = "BMW",
+            //    ModelYear = 2019
+            //});
+            //foreach (var c in carManager.GetAll().Data) // add .Data
+            //{
+            //    Console.WriteLine(c.Description);
+            //}
         }
     }
 }
