@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
@@ -19,18 +21,16 @@ namespace Business.Concrete
         {
             return _carDal.GetAll();
         }
-        public void Add(Car car)
+        public IResult Add(Car car) // void 
         {
-            if (car.DailyPrice > 0 && car.Description.Length > 2)
+            if (car.Description.Length<2)
             {
-                _carDal.Add(car);
-
-                Console.WriteLine("Arabanız Galeride Hazırlanıyor....");
+                //magic strings
+                return new ErrorResult(Messages.ProductInvalid);
             }
-            else
-            {
-                Console.WriteLine("Günük fiyatı 0 dan ve tanım ifadesi minimum 2 karakter olmalıdır...");
-            }
+            _carDal.Add(car);
+            Console.WriteLine(Messages.ProductPrepare);
+            return new SuccessResult(Messages.ProductAdded);        
         }
 
         public List<Car> GetByDailyPrice(decimal min, decimal max)
@@ -62,5 +62,11 @@ namespace Business.Concrete
         {
             _carDal.Update(car);
         }
+
+        public Car GetById(int carId)
+        {
+            return _carDal.Get(p => p.CarId == carId);
+        }
+
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCapProject\\Core\\Core.csproj": {}
+    "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCapProject\\Core\\Core.csproj": {
+    "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCapProject\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCapProject\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCapProject\\Core\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

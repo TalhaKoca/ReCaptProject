@@ -6262,11 +6262,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCapProject\\Business\\Business.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCapProject\\Business\\Business.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\Business\\Business.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCapProject\\Business\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6283,11 +6283,11 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCapProject\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCapProject\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCapProject\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCapProject\\Entities\\Entities.csproj"
+            "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\Entities\\Entities.csproj"
             }
           }
         }
