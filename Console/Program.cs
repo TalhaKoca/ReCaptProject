@@ -9,9 +9,57 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            CarTest();
+            //CarTest();
             //BrandTest();
             //ColorTest();
+            //CustomerTest();
+            //UserTest();
+            //RentalTest();
+
+        }
+
+        private static void RentalTest()
+        {
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            rentalManager.Add(new Rental
+            {
+                CarId = 1,
+                CustomerId = 1,
+                RentDate = new DateTime(2021, 02, 27),
+
+            });
+            rentalManager.Update(new Rental 
+            {
+                CarId=1,
+                CustomerId=1,
+                RentalId=1,
+                RentDate=new DateTime(2021,02,27),
+                ReturnDate = new DateTime(2021,02,28)
+            });
+        }
+
+        private static void UserTest()
+        {
+            UserManager userManager = new UserManager(new EfUserDal());
+            userManager.Add(new User
+            {
+                FirstName = "Talha",
+                LastName = "KOCA",
+                Email = "gmail.com",
+                Password = "1212",
+            }
+
+            );
+        }
+
+        private static void CustomerTest()
+        {
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+            customerManager.Add(new Customer
+            {
+                CompanyName = "ARÇELİK",
+                UserId = 3,
+            });
         }
 
         private static void ColorTest()
@@ -77,25 +125,25 @@ namespace ConsoleUI
             {
                 Console.WriteLine(result.Message);
             }
-       
-            //carManager.Add(new Car { BrandId = 2, ColorId = 5, DailyPrice = 120000, Description = "Hyundai", ModelYear = 2020 });
-            //carManager.Add(new Car { BrandId = 1, ColorId = 5, DailyPrice = 110000, Description = "Fiat", ModelYear = 2021 });
-            //carManager.GetCarsByBrand(1);
-            //carManager.Delete(new Car { CarId = 2003 });
 
-            //carManager.Update(new Car
-            //{
-            //    CarId = 1,
-            //    ColorId = 1,
-            //    BrandId = 1,
-            //    DailyPrice = 121222,
-            //    Description = "BMW",
-            //    ModelYear = 2019
-            //});
-            //foreach (var c in carManager.GetAll().Data) // add .Data
-            //{
-            //    Console.WriteLine(c.Description);
-            //}
+            carManager.Add(new Car { BrandId = 2, ColorId = 5, DailyPrice = 120000, Description = "Hyundai", ModelYear = 2020 });
+            carManager.Add(new Car { BrandId = 1, ColorId = 5, DailyPrice = 110000, Description = "Fiat", ModelYear = 2021 });
+            carManager.GetCarsByBrand(1);
+            carManager.Delete(new Car { CarId = 2003 });
+
+            carManager.Update(new Car
+            {
+                CarId = 1,
+                ColorId = 1,
+                BrandId = 1,
+                DailyPrice = 121222,
+                Description = "BMW",
+                ModelYear = 2019
+            });
+            foreach (var c in carManager.GetAll().Data) // add .Data
+            {
+                Console.WriteLine(c.Description);
+            }
         }
     }
 }
