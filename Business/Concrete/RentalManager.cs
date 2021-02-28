@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -14,29 +16,37 @@ namespace Business.Concrete
         {
             _rentalDal = rentalDal;
         }
-        public void Add(Rental rental)
+        public IResult Add(Rental rental)
         {
             var result = _rentalDal.GetAll(r=>r.CarId == rental.CarId && r.ReturnDate==null);
             if (result.Count >0)
             {
-                Console.WriteLine("Araba Henüz Teslim Alınmamıştır...");
+                return new ErrorResult(Messages.CarNotReturn);
             }
             _rentalDal.Add(rental);
+            return new SuccessResult(Messages.CarAdded);
         }
 
-        public void Delete(Rental rental)
+        public IResult Delete(Rental rental)
         {
+            if (DateTime.Now.Hour == 21)
+            {
+                return new ErrorResult(Messages.MaintenanceTime);
+            }
             _rentalDal.Delete(rental);
+            return new SuccessResult(Messages.CarRentalDeleted);
         }
 
-        public List<Rental> GetAll()
+        public IDataResult<List<Rental>> GetAll()
         {
-            return _rentalDal.GetAll();
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(),Messages.CarRentalListed);
+           
         }
 
-        public void Update(Rental rental)
+        public IResult Update(Rental rental)
         {
             _rentalDal.Update(rental);
+            return new SuccessResult();
         }
     }
 }

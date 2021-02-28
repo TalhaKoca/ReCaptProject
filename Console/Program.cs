@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Business.Constants;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using System;
@@ -15,7 +16,7 @@ namespace ConsoleUI
             //CustomerTest();
             //UserTest();
             //RentalTest();
-
+            
         }
 
         private static void RentalTest()
@@ -65,25 +66,26 @@ namespace ConsoleUI
         private static void ColorTest()
         {
             ColorManager colorManager = new ColorManager(new EfColorDal());
-            colorManager.Add(new Color
-            {
-                ColorName = "Gümüş Gri"
-            });
-            colorManager.Update(new Color
-            {
-                ColorId = 1,
-                ColorName = "Siyah",
-            });
-            foreach (var c in colorManager.GetColorsByColorId(2))
+            //colorManager.Add(new Color
+            //{
+            //    ColorName = "Gümüş Gri"
+            //});
+            //colorManager.Update(new Color
+            //{
+            //    ColorId = 1,
+            //    ColorName = "Siyah",
+            //});
+            foreach (var c in colorManager.GetColorsByColorId(2).Data)
             {
                 Console.WriteLine(c.ColorName);
+                Console.WriteLine(Messages.ProductListed);
             }
         }
 
         private static void BrandTest()
         {
             BrandManager brandManager = new BrandManager(new EfBrandDal());
-            foreach (var brand in brandManager.GetAll())
+            foreach (var brand in brandManager.GetAll().Data)
             {
                 Console.WriteLine(brand.BrandName);
             }
@@ -102,7 +104,7 @@ namespace ConsoleUI
                 BrandId = 1,
                 BrandName = "Mercedes",
             });
-            foreach (var b in brandManager.GetBrands("Mercedes"))
+            foreach (var b in brandManager.GetBrands("Mercedes").Data)
             {
                 Console.WriteLine(b.BrandId);
             }
@@ -139,7 +141,8 @@ namespace ConsoleUI
                 DailyPrice = 121222,
                 Description = "BMW",
                 ModelYear = 2019
-            });
+            }
+            );
             foreach (var c in carManager.GetAll().Data) // add .Data
             {
                 Console.WriteLine(c.Description);

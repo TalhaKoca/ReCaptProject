@@ -5,5 +5,5 @@
     [CustomerId] INT NULL, 
     [RentDate] DATETIME2 NULL, 
     [ReturnDate] DATETIME2 NULL
-    CONSTRAINT [PK_Rentals] PRIMARY KEY CLUSTERED ([RentalId] ASC) DEFAULT Nulls 
+    CONSTRAINT [PK_Rentals] PRIMARY KEY CLUSTERED ([RentalId] ASC)
 )

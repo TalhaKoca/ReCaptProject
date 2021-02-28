@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
@@ -15,24 +17,28 @@ namespace Business.Concrete
         {
             _customerDal = customerDal;
         }
-        public void Add(Customer customer)
+        public IResult Add(Customer customer)
         {
             _customerDal.Add(customer);
+            return new SuccessResult(Messages.CustomerAdded);
         }
 
-        public void Delete(Customer customer)
+        public IResult Delete(Customer customer)
         {
             _customerDal.Delete(customer);
+            return new SuccessResult(Messages.CustomerDeleted);
         }
 
-        public List<Customer> GetAll()
+        public IDataResult<List<Customer>> GetAll()
         {
-            return _customerDal.GetAll();
+            return new SuccessDataResult<List<Customer>>(_customerDal.GetAll());
+
         }
 
-        public void Update(Customer customer)
+        public IResult Update(Customer customer)
         {
             _customerDal.Update(customer);
+            return new SuccessResult(Messages.CustomerUpdated);
         }
     }
 }

@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Console",
+    "\\Core",
+    "\\DataAccess",
+    "\\DataAccess\\Concrete",
+    "\\DataAccess\\Concrete\\EntityFramework"
   ],
   "SelectedNode": "\\ReCapProject.sln",
   "PreviewInSolutionExplorer": false

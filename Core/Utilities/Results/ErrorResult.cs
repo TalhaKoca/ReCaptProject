@@ -12,7 +12,7 @@ namespace Core.Utilities.Results
 
         }
         public ErrorResult() : base(false)
-        // true default olarak vermiş olduk...
+        // false default olarak vermiş olduk...
         {
 
         }
