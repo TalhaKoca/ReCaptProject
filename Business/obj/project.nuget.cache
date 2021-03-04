@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "kZpKLaEZDTrfQ2zkvUv4RDs2JJ3jFZ4KAEfcQZDoognir7rE2nhcuPej3pPfXXpdqVp4YjJtyxBn/bih2cFoBw==",
+  "dgSpecHash": "mShzMtJ9K0+Ey44IGfOegeja/QVab/FW+HAwJ/whiHRDZj5Kq0pI5bcyslRUa3vz772Jd8C6JEB2esFUj3Jy8g==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\Visual Studio\\ReCaptProject\\Business\\Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.0\\autofac.extras.dynamicproxy.6.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation\\9.5.1\\fluentvalidation.9.5.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

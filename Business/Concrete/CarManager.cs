@@ -1,9 +1,13 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -26,13 +30,10 @@ namespace Business.Concrete
              return new SuccessDataResult<List<Car>>( _carDal.GetAll(),Messages.ProductListed);
             // return new DataResult<List<Car>>( _carDal.GetAll(),true,"Ürünler Listelendi...");
         }
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car) // void 
         {
-            if (car.Description.Length<2)
-            {
-                //magic strings
-                return new ErrorResult(Messages.ProductInvalid);
-            }
+         
             _carDal.Add(car);
             Console.WriteLine(Messages.ProductPrepare);
             return new SuccessResult(Messages.ProductAdded);        
@@ -81,3 +82,4 @@ namespace Business.Concrete
 
     }
 }
+//ValidationTool.Validate(new CarValidator(), car);
