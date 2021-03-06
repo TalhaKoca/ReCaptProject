@@ -29,6 +29,9 @@ namespace Business.Constants
         public static string CarNotReturn = "Araba Henüz Teslim Alınmamıştır";
         public static string CarRentalDeleted = "Kiralama Bilgileri Kaldırılıyor.";
         public static string CarRentalListed = "Kiralama Bilgileri Listeleniyor";
-
+        
+        public static string CarCountOfBrandError="Bir Markada En Fazla 10 Araç Olabilir.";
+        public static string CarNameAlreadyExists = "Bu İsimde Bir Araç Tanımı Mevcut";
+        public static string BrandNameExceded = "Marka Limiti Aşıldığı İçin Yeni Ürün Eklenemiyor. ";
     }
 }

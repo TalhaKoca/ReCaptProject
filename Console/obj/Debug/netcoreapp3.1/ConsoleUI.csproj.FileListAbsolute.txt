@@ -125,3 +125,5 @@ C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\obj\Debug\netcoreapp3.1\
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Autofac.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\FluentValidation.dll
