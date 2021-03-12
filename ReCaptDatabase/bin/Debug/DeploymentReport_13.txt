@@ -1,0 +1,16 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       [dbo].[PK_Rentals] on [dbo].[Rentals]
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[CarsImages] (Table)
+       [dbo].[PK_Rentals] (Primary Key)
+
+** Supporting actions
