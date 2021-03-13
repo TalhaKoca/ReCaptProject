@@ -7,5 +7,10 @@ C:\Users\HP\Desktop\Visual Studio\ReCapProject\ReCaptDatabase\obj\Debug\ReCaptDa
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\ReCaptDatabase\bin\Debug\ReCaptDatabase.dacpac
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\ReCaptDatabase\bin\Debug\ReCaptDatabase.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\ReCaptDatabase\bin\Debug\ReCaptDatabase.pdb
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\ReCaptDatabase\obj\Debug\ReCaptDatabase.sqlprojAssemblyReference.cache
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\ReCaptDatabase\obj\Debug\ReCaptDatabase.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\ReCaptDatabase\obj\Debug\ReCaptDatabase.pdb
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\ReCaptDatabase\obj\Debug\Model.xml
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\ReCaptDatabase\obj\Debug\refactor.xml
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\ReCaptDatabase\obj\Debug\postdeploy.sql
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\ReCaptDatabase\obj\Debug\predeploy.sql

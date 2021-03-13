@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.CCS;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
@@ -35,7 +36,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.ProductListed);
             // return new DataResult<List<Car>>( _carDal.GetAll(),true,"Ürünler Listelendi...");
         }
-        
+        [SecuredOperation("")]
         [ValidationAspect(typeof(CarValidator))]
         // attribute lere tipler bu şekilde atılıyor typeof....(burda sadece tip gönderiliyor.)
         public IResult Add(Car car) // void 

@@ -66,6 +66,13 @@ C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\ConsoleUI.runtimeconfig.dev.json
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\ConsoleUI.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\ConsoleUI.pdb
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -95,6 +102,7 @@ C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
@@ -122,10 +130,3 @@ C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\obj\Debug\netcoreapp3.1\
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\obj\Debug\netcoreapp3.1\ConsoleUI.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\obj\Debug\netcoreapp3.1\ConsoleUI.pdb
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\obj\Debug\netcoreapp3.1\ConsoleUI.genruntimeconfig.cache
-C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Autofac.dll
-C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
-C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Castle.Core.dll
-C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
-C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\FluentValidation.dll
-C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
-C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll

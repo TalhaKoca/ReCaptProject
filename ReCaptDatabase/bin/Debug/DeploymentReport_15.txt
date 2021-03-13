@@ -1,0 +1,15 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       [dbo].[PK_Users] on [dbo].[Users]
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[PK_Users] (Primary Key)
+
+** Supporting actions
