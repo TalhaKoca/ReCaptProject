@@ -3,6 +3,9 @@ using Business.BusinessAspects.Autofac;
 using Business.CCS;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Performance;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Business;
@@ -15,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Transactions;
 
 namespace Business.Concrete
 {
@@ -27,6 +31,8 @@ namespace Business.Concrete
             _carDal = carDal;
             _brandService = brandService;
         }
+
+        [CacheAspect]
         public IDataResult<List<Car>> GetAll()
         {
             if (DateTime.Now.Hour == 1)
@@ -36,9 +42,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.ProductListed);
             // return new DataResult<List<Car>>( _carDal.GetAll(),true,"Ürünler Listelendi...");
         }
-        [SecuredOperation("")]
+        [SecuredOperation("car.add,admin")]
         [ValidationAspect(typeof(CarValidator))]
         // attribute lere tipler bu şekilde atılıyor typeof....(burda sadece tip gönderiliyor.)
+        [CacheRemoveAspect("IProductService.Get")]
+
         public IResult Add(Car car) // void 
         {
             IResult result = BusinessRules.Run(
@@ -89,6 +97,7 @@ namespace Business.Concrete
         }
 
         [ValidationAspect(typeof(CarValidator))]
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Update(Car car)
         {
             var result = _carDal.GetAll(p => p.BrandId == car.BrandId).Count;
@@ -100,6 +109,8 @@ namespace Business.Concrete
             return new SuccessResult(Messages.ProductUpdated);
         }
 
+        [CacheAspect]
+        [PerformanceAspect(5)]
         public IDataResult<Car> GetById(int carId)
         {
             return new SuccessDataResult<Car>(_carDal.Get(p => p.CarId == carId));
@@ -128,11 +139,24 @@ namespace Business.Concrete
         private IResult CheckIfBrandLimitExceded()
         {
             var result = _brandService.GetAll();
-            if (result.Data.Count>15)
+            if (result.Data.Count > 15)
             {
                 return new ErrorResult(Messages.BrandNameExceded);
             }
             return new SuccessResult();
+        }
+
+        [TransactionScopeAspect]
+        public IResult AddTransactionalTest(Car car)
+        {
+            Add(car);
+            if (car.Description == "Toyota")
+            {
+                throw new Exception(Messages.TransactionError);
+            }
+
+            Add(car);
+            return null;
         }
     }
 }

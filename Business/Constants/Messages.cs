@@ -44,5 +44,6 @@ namespace Business.Constants
         public static string SuccessfulLogin = "Başarıyla Giriş Gerçekleştirildi.";
         public static string UserAlreadyExists = "Böyle Bir Kullanıcı Zaten Var";
         public static string AccessTokenCreated = "Token Erişimi Oluşturuldu.";
+        public static string TransactionError = "Transaction Hatası Alındı.";
     }
 }

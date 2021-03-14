@@ -675,7 +675,7 @@
 									<Property Name="Length" Value="500" />
 									<Relationship Name="Type">
 										<Entry>
-											<References ExternalSource="BuiltIns" Name="[binary]" />
+											<References ExternalSource="BuiltIns" Name="[varbinary]" />
 										</Entry>
 									</Relationship>
 								</Element>
@@ -692,7 +692,7 @@
 									<Property Name="Length" Value="500" />
 									<Relationship Name="Type">
 										<Entry>
-											<References ExternalSource="BuiltIns" Name="[binary]" />
+											<References ExternalSource="BuiltIns" Name="[varbinary]" />
 										</Entry>
 									</Relationship>
 								</Element>

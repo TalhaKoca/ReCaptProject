@@ -71,8 +71,10 @@ C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.WebUtilities.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -89,6 +91,7 @@ C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.ObjectPool.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
@@ -97,6 +100,7 @@ C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Microsoft.Net.Http.Headers.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\HP\Desktop\Visual Studio\ReCaptProject\Console\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
