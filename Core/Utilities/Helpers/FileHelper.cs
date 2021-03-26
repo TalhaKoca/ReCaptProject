@@ -9,61 +9,54 @@ namespace Core.Utilities.Helpers
 {
     public class FileHelper
     {
+        //sourcepath : kaynak yol
+        public static string directory = Environment.CurrentDirectory + @"\wwwroot";
+        public static string path = @"/uploads/";
         public static string Add(IFormFile file)
         {
             var sourcepath = Path.GetTempFileName();
-            if (file.Length>0)
+            if (file.Length > 0)
             {
-                using (var uploading = new FileStream(sourcepath,FileMode.Create))
+                using (var stream = new FileStream(sourcepath, FileMode.Create))
                 {
-                    file.CopyTo(uploading);
+                    file.CopyTo(stream);
                 }
             }
-            var result = newPath(file);
-            File.Move(sourcepath, result);
-            return result;
-        }
+            var extension = Path.GetExtension(file.FileName);
+            var newFileName = Guid.NewGuid().ToString("N") + extension;
 
-        public static IResult Delete(string path)
+            File.Move(sourcepath, directory + path + newFileName);
+            return (path + newFileName).Replace("\\", " / ");
+        }
+        public static IResult Delete(string oldPath)
         {
+            path = (directory + oldPath).Replace("/", "\\");
             try
             {
                 File.Delete(path);
             }
             catch (Exception exception)
             {
-
                 return new ErrorResult(exception.Message);
             }
 
             return new SuccessResult();
         }
-
         public static string Update(string sourcePath, IFormFile file)
         {
-            var result = newPath(file).ToString();
+            var extension = Path.GetExtension(file.FileName);
+            var newFileName = Guid.NewGuid().ToString("N") + extension;
+
             if (sourcePath.Length > 0)
             {
-                using (var stream = new FileStream(result,FileMode.Create))
+                using (var stream = new FileStream(directory + path + newFileName, FileMode.Create))
                 {
                     file.CopyTo(stream);
                 }
             }
-            File.Delete(sourcePath);
-            return result;
+            File.Delete(directory + sourcePath);
+            return (path + newFileName).Replace("\\", "/");
         }
 
-
-        public static string newPath(IFormFile file)
-        {
-            FileInfo ff = new FileInfo(file.FileName);
-            string fileExtension = ff.Extension;
-
-            string path = Environment.CurrentDirectory + @"\wwwroot\uploads";
-            var newPath = Guid.NewGuid().ToString() + fileExtension;
-
-            string result = $@"{path}\{newPath}";
-            return result;
-        }
     }
 }

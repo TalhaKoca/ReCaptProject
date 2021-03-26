@@ -61,12 +61,23 @@ namespace Business.Concrete
 
         public IDataResult<List<CarImage>> GetByCarId(int carId)
         {
-            IResult result = BusinessRules.Run(CheckIfCarImageNull(carId));
-            if (result != null)
+            //IResult result = BusinessRules.Run(CheckIfCarImageNull(carId));
+            //if (result != null)
+            //{
+            //    return new ErrorDataResult<List<CarImage>>();
+            //}
+
+            //return new SuccessDataResult<List<CarImage>>(CheckIfCarImageNull(carId).Data);
+
+            List<CarImage> carImages = new List<CarImage>();
+            var result = _imageDal.GetAll(c => c.CarId == carId).Count;
+            if (result == 0)
             {
-                return new ErrorDataResult<List<CarImage>>();
+                CarImage c = new CarImage { CarId = carId, Date = DateTime.Now, ImagePath = @"\uploads\defaultlogo.jpg" };
+                carImages.Add(c);
+                return new SuccessDataResult<List<CarImage>>(carImages);
             }
-            return new SuccessDataResult<List<CarImage>>(_imageDal.GetAll(i => i.CarId == carId));
+            return new SuccessDataResult<List<CarImage>>(_imageDal.GetAll(c => c.CarId == carId));
 
         }
 
@@ -98,9 +109,9 @@ namespace Business.Concrete
 
         private IDataResult<List<CarImage>> CheckIfCarImageNull(int carId)
         {
-            string path = @"/wwwroot/uploads/defaultlogo.jpg";
+            string path = @"\uploads\defaultlogo.jpg";
             var result = _imageDal.GetAll(i => i.CarId == carId);
-            if (result==null)
+            if (result.Count==null)
             {
                 List<CarImage> carImage = new List<CarImage>();
                 carImage.Add(new CarImage
@@ -113,7 +124,8 @@ namespace Business.Concrete
                 return new SuccessDataResult<List<CarImage>>(carImage);
             }
             return new SuccessDataResult<List<CarImage>>
-                (_imageDal.GetAll(i => i.CarId == carId).ToList());
+                (result);
         }
     }
 }
+

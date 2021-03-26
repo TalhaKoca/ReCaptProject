@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
@@ -23,6 +24,7 @@ namespace WebAPI.Controllers
         [HttpGet("getall")]
         public IActionResult GetAllBrand()
         {
+            Thread.Sleep(1000);
             var result = _brandService.GetAll();
             if (result.Success)
             {
@@ -34,6 +36,17 @@ namespace WebAPI.Controllers
         public IActionResult GetAddBrand(Brand brand)
         {
             var result = _brandService.Add(brand);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result.Message);
+        }
+
+        [HttpPost("delete")]
+        public IActionResult GetDeleteBrand(Brand brand)
+        {
+            var result = _brandService.Delete(brand);
             if (result.Success)
             {
                 return Ok(result);
