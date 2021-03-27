@@ -55,7 +55,7 @@ namespace Core.Utilities.Helpers
                 }
             }
             File.Delete(directory + sourcePath);
-            return (path + newFileName).Replace("\\", "/");
+            return (path + newFileName).Replace("/", "\\");
         }
 
     }
