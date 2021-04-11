@@ -45,5 +45,11 @@ namespace Business.Constants
         public static string UserAlreadyExists = "Böyle Bir Kullanıcı Zaten Var";
         public static string AccessTokenCreated = "Token Erişimi Oluşturuldu.";
         public static string TransactionError = "Transaction Hatası Alındı.";
+        
+        public static string PaymentListed = "Kart Bilgileri Listelendi.";
+        public static string PaymentUpdated = "Kart Bilgileri Güncellendi.";
+        public static string PaymentDeleted = "Kart Bilgileri Kalıcı Olarak Silindi..";
+        public static string PaymentAlreadyExists = "Kart Bilgileri Sistemde Kayıtlı";
+        public static string PaymentAdded = "Kart Başarıyla Eklendi.";
     }
 }

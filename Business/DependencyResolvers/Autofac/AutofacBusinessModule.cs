@@ -43,6 +43,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<RentalManager>().As<IRentalService>();
             builder.RegisterType<EfRentalDal>().As<IRentalDal>();
 
+            builder.RegisterType<PaymentManager>().As<IPaymentService>();
+            builder.RegisterType<EfPaymentDal>().As<IPaymentDal>();
+
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 

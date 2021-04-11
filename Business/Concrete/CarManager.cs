@@ -80,11 +80,6 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(p => p.ColorId == id));
         }
-
-        public IDataResult<List<CarDetailDto>> GetCarDetails()
-        {
-            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails());
-        }
         
         public IResult Delete(Car car)
         {
@@ -106,10 +101,10 @@ namespace Business.Concrete
         }
 
         [CacheAspect]
-        [PerformanceAspect(5)]
-        public IDataResult<Car> GetById(int carId)
+        //[PerformanceAspect(5)]
+        public IDataResult<List<Car>> GetById(int carId)
         {
-            return new SuccessDataResult<Car>(_carDal.Get(p => p.CarId == carId));
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(p => p.CarId == carId));
         }
 
         private IResult CheckIfCarCountOfBrandCorrect(int brandId) // Car car
@@ -155,6 +150,11 @@ namespace Business.Concrete
             return null;
         }
 
+        public IDataResult<List<CarDetailDto>> GetCarDetails()
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails());
+        }
+
         public IDataResult<List<CarDetailDto>> GetCarDetailsByBrandId(int brandId)
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(b => b.BrandId == brandId));
@@ -169,6 +169,11 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(c => c.CarId == carId));
 
+        }
+
+        public IDataResult<List<CarDetailDto>> GetCarDetailsByCarColorIdAndBrandId(int colorId, int brandId)
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(o => o.ColorId == colorId && o.BrandId == brandId));
         }
     }
 }

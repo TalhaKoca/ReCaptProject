@@ -53,6 +53,7 @@ namespace Business.Concrete
         }
 
         public IResult UserExists(string email)
+            
         {
             if (_userService.GetByMail(email).Data != null)
             {

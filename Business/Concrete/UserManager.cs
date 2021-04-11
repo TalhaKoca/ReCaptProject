@@ -3,6 +3,7 @@ using Business.Constants;
 using Core.Entities.Concrete;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -53,6 +54,11 @@ namespace Business.Concrete
         public IDataResult<User> GetByMail(string email)
         {
             return new SuccessDataResult<User>(_userDal.Get(u => u.Email == email));  
+        }
+
+        public IDataResult<UserDetailDto> GetByEmail(string email)
+        {
+            return new SuccessDataResult<UserDetailDto>(_userDal.GetByEmail(u => u.Email == email));
         }
     }
 }
