@@ -27,7 +27,7 @@ namespace ConsoleUI
             {
                 CarId = 1,
                 CustomerId = 1,
-                RentDate = new DateTime(2021, 02, 27),
+                //RentDate = new DateTime(2021, 02, 27),
 
             });
             rentalManager.Update(new Rental 
@@ -35,8 +35,8 @@ namespace ConsoleUI
                 CarId=1,
                 CustomerId=1,
                 RentalId=1,
-                RentDate=new DateTime(2021,02,27),
-                ReturnDate = new DateTime(2021,02,28)
+                //RentDate=new DateTime(2021,02,27),
+                //ReturnDate = new DateTime(2021,02,28)
             });
         }
 
