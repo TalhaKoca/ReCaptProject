@@ -5,24 +5,28 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ColorsController : ControllerBase
+    public class PaymentsController : ControllerBase
     {
-        IColorService _colorService;
+        IPaymentService _paymentService;
 
-        public ColorsController(IColorService colorService)
+        public PaymentsController(IPaymentService paymentService)
         {
-            _colorService = colorService;
+            _paymentService = paymentService;
         }
+
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            var result = _colorService.GetAll();
+
+            Thread.Sleep(1000);
+            var result = _paymentService.GetAll();
             if (result.Success)
             {
                 return Ok(result);
@@ -30,47 +34,52 @@ namespace WebAPI.Controllers
             return BadRequest(result.Message);
         }
 
-        [HttpGet("getcolorbyid")]
-        public IActionResult GetColorById(int colorId)
+        [HttpGet("getbycustomerid")]
+        public IActionResult GetByCustomerId(int customerId)
         {
-            var result = _colorService.GetColorsByColorId(colorId);
+            var result = _paymentService.GetByCustomerId(customerId);
+
             if (result.Success)
             {
                 return Ok(result);
             }
             return BadRequest(result.Message);
         }
+
         [HttpPost("add")]
-        public IActionResult Add(Color color)
+        public IActionResult Add(Payment payment)
         {
-            var result = _colorService.Add(color);
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
+            var result = _paymentService.Add(payment);
 
-        [HttpPost("update")]
-        public IActionResult Update(Color color)
-        {
-            var result = _colorService.Update(color);
             if (result.Success)
             {
                 return Ok(result);
             }
-            return BadRequest(result);
+            return BadRequest(result.Message);
         }
 
         [HttpPost("delete")]
-        public IActionResult Delete(Color color)
+        public IActionResult Delete(Payment payment)
         {
-            var result = _colorService.Delete(color);
+            var result = _paymentService.Delete(payment);
+
             if (result.Success)
             {
                 return Ok(result);
             }
-            return BadRequest(result);
+            return BadRequest(result.Message);
+        }
+
+        [HttpPost("update")]
+        public IActionResult Update(Payment payment)
+        {
+            var result = _paymentService.Update(payment);
+
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result.Message);
         }
     }
 }
