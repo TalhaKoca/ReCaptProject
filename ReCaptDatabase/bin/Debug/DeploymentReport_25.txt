@@ -1,0 +1,31 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       Primary Key: unnamed constraint on [dbo].[Colors]
+       [dbo].[PK_Cars] on [dbo].[Cars]
+       [dbo].[PK_CarsImages] on [dbo].[CarsImages]
+       [dbo].[PK_Rentals] on [dbo].[Rentals]
+       [dbo].[PK_Users] on [dbo].[Users]
+     Possible data issues
+       The type for column ColorName in table [dbo].[Colors] is currently  NVARCHAR (50) NULL but is being changed to  NCHAR
+         (10) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type 
+         NCHAR (10) NULL.
+
+** User actions
+     Alter
+       [dbo].[Colors] (Table)
+     Create
+       Primary Key: unnamed constraint on [dbo].[Colors] (Primary Key)
+       [dbo].[Payments] (Table)
+       [dbo].[PK_Cars] (Primary Key)
+       [dbo].[PK_CarsImages] (Primary Key)
+       [dbo].[PK_Rentals] (Primary Key)
+       [dbo].[PK_Users] (Primary Key)
+
+** Supporting actions
+
+The type for column ColorName in table [dbo].[Colors] is currently  NVARCHAR (50) NULL but is being changed to  NCHAR (10) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  NCHAR (10) NULL.
+
