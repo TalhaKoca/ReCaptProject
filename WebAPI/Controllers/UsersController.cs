@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Entities.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,10 +14,12 @@ namespace WebAPI.Controllers
     public class UsersController : ControllerBase
     {
         IUserService _userService;
+        IAuthService _authService;
 
-        public UsersController(IUserService userService)
+        public UsersController(IUserService userService, IAuthService authService)
         {
             _userService = userService;
+            _authService = authService;
         }
         [HttpGet("getall")]
         public IActionResult GetAll()
@@ -43,6 +46,20 @@ namespace WebAPI.Controllers
         public IActionResult GetByEmail(string email)
         {
             var result = _userService.GetByEmail(email);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("updated")]
+        public IActionResult Updated(UserForUpdateDto userForUpdateDto)
+        {
+            var user = _userService.GetUserById(userForUpdateDto.Id);
+            var token = _authService.CreateAccessToken(user.Data);
+
+            var result = _userService.Updated(userForUpdateDto);
             if (result.Success)
             {
                 return Ok(result);
