@@ -2,7 +2,9 @@
 using Business.Constants;
 using Core.Entities.Concrete;
 using Core.Utilities.Results;
+using Core.Utilities.Security.Hashing;
 using DataAccess.Abstract;
+using Entities.Concrete;
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;
@@ -35,6 +37,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<User>>( _userDal.GetAll());
         }
 
+        public IDataResult<User> GetUserById(int userId)
+        {
+            return new SuccessDataResult<User>(_userDal.Get(u => u.Id == userId));
+        }
+
         public IDataResult<List<User>> GetUserByUserId(int id)
         {
             return new SuccessDataResult<List<User>>(_userDal.GetAll(u => u.Id == id), Messages.UserListed);
@@ -59,6 +66,42 @@ namespace Business.Concrete
         public IDataResult<UserDetailDto> GetByEmail(string email)
         {
             return new SuccessDataResult<UserDetailDto>(_userDal.GetByEmail(u => u.Email == email));
+        }
+
+        public IDataResult<UserForUpdateDto> Updated(UserForUpdateDto userForUpdateDto)
+        {
+            var currentUser = GetUserById(userForUpdateDto.Id);
+            var user = new User
+            {
+                Id = userForUpdateDto.Id,
+                FirstName = userForUpdateDto.FirstName,
+                LastName = userForUpdateDto.LastName,
+                Email = userForUpdateDto.Email,
+                PasswordHash = currentUser.Data.PasswordHash,
+                PasswordSalt = currentUser.Data.PasswordSalt,
+                Status = currentUser.Data.Status
+            };
+
+            byte[] passwordHash, passwordSalt;
+
+            if (userForUpdateDto.Password != "")
+            {
+                HashingHelper.CreatePasswordHash(userForUpdateDto.Password,out passwordHash, out passwordSalt);
+                user.PasswordHash = passwordHash;
+                user.PasswordSalt = passwordSalt;
+            }
+
+            Update(user);
+
+            //var customer = new Customer
+            //{
+            //    CustomerId = userForUpdateDto.CustomerId,
+            //    UserId = userForUpdateDto.Id,
+            //    CompanyName = userForUpdateDto.companyName
+            //};
+            //_customerService.Update(customer);
+
+            return new SuccessDataResult<UserForUpdateDto>(userForUpdateDto, Messages.UserUpdated);
         }
     }
 }
