@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Entities.DTOs
 {
-    public class UserForLoginDto : IDto
+    public class UserForUpdateDto:UserForRegisterDto,IDto
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public int Id { get; set; }
+        public int CustomerId { get; set; }
     }
 }
